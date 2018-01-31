@@ -13,6 +13,12 @@ import numpy as np
 
 def ImportCorrelationMesh(Path,Filename):
 
+	CompleteName = os.path.join(Path,Filename)
+
+	file1 = open(CompleteName,'r')
+	TempData = file1.readlines()
+	file1.close()
+
 
 def CalculateCost(CPTimes,CPVals,CorrelationMatrix):
 
