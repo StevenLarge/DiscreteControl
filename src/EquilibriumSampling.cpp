@@ -18,12 +18,12 @@ using namespace std;
 int main(){
 
 double dt = 0.1;
-double CPMax = 1.0;
-double CP = -1.0;
+double CPMax = 5.0;
+double CP = -5.0;
 int MAXLAG = 500;
 double EqTime = 500;
 int TotalStats = 10000000;
-double dX = 0.01;
+double dX = 0.05;
 
 	while(CP <= CPMax){
 

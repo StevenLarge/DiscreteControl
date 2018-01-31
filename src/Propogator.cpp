@@ -33,19 +33,22 @@ double mass = 1.0;
 
 /* Global variables for Bistable well parameters */
 
-double kL = 0.2;
-double kR = 0.2;
+double kL = 0.5;
+double kR = 0.5;
+//double kL = 0.2;
+//double kR = 0.2;
 double DeltaE = 0.0;
-double X_m = 10.0;
+double X_m = 5.0;
+//double X_m = 10.0;
 double BistableTrap = 1.0;
 
 
 /* Global variables for simulation parameters */
 
 double EqTime = 500;
-double CP = -1.0;
-double CPMax = 1.0;
-double dX = 0.01;
+double CP = -5.0; 					//New values, used to be \pm 1
+double CPMax = 5.0;
+double dX = 0.05;
 int HUN_MILLION = 100000000;
 int TEN_MILLION = 10000000;
 int ONE_MILLION = 1000000;

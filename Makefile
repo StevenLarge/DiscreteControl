@@ -26,7 +26,7 @@ CFLAGS = -I.
 DEPS_NEQ = $(IDIR)/DiscreteControl.h
 DEPS_EQ = $(IDIR)/DiscreteControl.h $(IDIR)/DiscreteControl_Eq.h
 
-CC = g++ -O3
+CC = g++ -std=c++11 -O3
 
 
 all: $(PRODUCT_NEQ) $(PRODUCT_EQ)
