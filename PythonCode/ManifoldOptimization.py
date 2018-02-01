@@ -15,19 +15,52 @@ def ImportCorrelationMesh(Path,Filename):
 
 	CompleteName = os.path.join(Path,Filename)
 
+	CorrelationArray = []
+
 	file1 = open(CompleteName,'r')
-	TempData = file1.readlines()
+	TotalData = file1.readlines()
 	file1.close()
+
+	for index1 in range(len(TotalData)):
+		Parsed = TotalData[index1].split()
+		CorrelationArray.append([])
+		for index2 in range(len(Parsed)):
+			CorrelationArray[index1].append(eval(Parsed[index2]))
+
+	return CorrelationArray
+
+
+def TangentPlane(CPTimes):
+
+
 
 
 def CalculateCost(CPTimes,CPVals,CorrelationMatrix):
 
 
+
 def ComputeGradient(CPVals,CPTime,CorrelationMatrix):
 
+	GradientVector = []
 
-def RestrictionUpdate(VectorGradient,StepSize,CorrelationMatrix,CPVals,CPTimes)
+	#Find Gradient along each of the CP Time directions
 
+	#Find the total gradient vector
+
+	return GradientVector
+
+
+def RestrictionUpdate(VectorGradient,StepSize,CorrelationMatrix,CPVals,CPTimes):
+
+	NewCPTimes = []
+
+	#Project Gradient vector onto Tangent space
+
+	#Increment the current protocol times in the tangent space
+
+	#Project the incremented point back onto the N-1 Sphere
+
+	return NewCPTimes
 
 
 def OptimizeTime(NumSteps,TotalTime,CPVals):

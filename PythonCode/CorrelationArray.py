@@ -66,12 +66,21 @@ def WriteLagTime(Path,Filename,LagTime):
 
 
 
-ReadPath = "EquilibriumData/"
+ReadPath = "/Users/stevelarge/Research/DiscreteControl/LinkedCode_CPP/EquilibriumData/"
 WritePath = "CorrelationMesh/"
 
 CPValsStr = []
+#CPVals = [-5.00]
+#CP = -4.95
+
+#while CP <= 5.0:
+#	CPVals.append(round(CP,2))
+#	CP = CP + 0.05
+
+#CPVals.append(5.0)
+
 CPVals = [-1.00]
-CP = -0.99
+CP = -0.95
 
 while CP <= 1.0:
 	CPVals.append(round(CP,2))
