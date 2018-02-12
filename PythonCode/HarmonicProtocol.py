@@ -62,10 +62,10 @@ CP = 0
 Equilibration = 100
 ProtocolTime = 1
 
-MaxTime = 10000
+MaxTime = 1000
 CPSteps = 10
 
-Repetitions = 1000
+Repetitions = 100
 
 WorkTime = []
 ProtocolArray = []
@@ -75,6 +75,8 @@ while ProtocolTime < MaxTime:
 	WorkAcc = 0
 
 	CPTime = ProtocolTime/float(CPSteps)
+
+	print "Protocol Time --> " + str(ProtocolTime)
 
 	for index2 in range(Repetitions):
 
@@ -95,7 +97,7 @@ while ProtocolTime < MaxTime:
 				time,position,velocity = Langevin(time,position,velocity,CP)
 
 			CPOld = CP
-			CP = CP + 1
+			CP = CP + 0.25
 
 			WorkAcc = WorkAcc + CalcWork(position,CPOld,CP)
 
@@ -108,7 +110,9 @@ while ProtocolTime < MaxTime:
 WritePath = "GaussianWork/"
 Filename = "WorkTotal_k" + str(kTrap) + ".dat"
 
-plt.plot(ProtocolTime,WorkTime)
+plt.plot(ProtocolArray,WorkTime)
+plt.xscale('log')
+plt.yscale('log')
 plt.plot()
 plt.show()
 plt.close()
